@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "3377fa58-b819-4572-98a9-60b84f644197",
+		"name": "Prueba Nexos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13837808"
+	},
+	"item": [
+		{
+			"name": "getAllCharges",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/charges/getAllCharges"
+			},
+			"response": []
+		},
+		{
+			"name": "addCharges",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"charge\": \"administrador\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/charges/addCharges"
+			},
+			"response": []
+		},
+		{
+			"name": "addUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nombre prueba\",\r\n    \"age\": 25,\r\n    \"userCharge\": {\r\n        \"id\": 1,\r\n        \"charge\": \"administrador\"\r\n    },\r\n    \"admissionDate\": \"2005-11-21\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/addUser"
+			},
+			"response": []
+		},
+		{
+			"name": "addUser 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nombre prueba 2\",\r\n    \"age\": 50,\r\n    \"userCharge\": {\r\n        \"id\": 1,\r\n        \"charge\": \"administrador\"\r\n    },\r\n    \"admissionDate\": \"1998-11-21\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/addUser"
+			},
+			"response": []
+		},
+		{
+			"name": "addCommodity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productName\": \"Mercancia prueba 3\",\r\n    \"amount\": 84,\r\n    \"entryDate\": \"2019-02-23\",\r\n    \"user\": {\r\n        \"id\": 1,\r\n        \"name\": \"Nombre prueba\",\r\n        \"age\": 25,\r\n        \"userCharge\": {\r\n            \"id\": 1,\r\n            \"charge\": \"administrador\"\r\n        },\r\n        \"admissionDate\": \"2005-11-21\"\r\n    },\r\n    \"updateDate\": null,\r\n    \"userUpdate\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/commodity/addCommodity"
+			},
+			"response": []
+		},
+		{
+			"name": "updateCommodity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"productName\": \"Mercancia prueba 3\",\r\n    \"amount\": 50,\r\n    \"entryDate\": \"2019-02-23\",\r\n    \"user\": {\r\n        \"id\": 2,\r\n        \"name\": \"Nombre prueba\",\r\n        \"age\": 25,\r\n        \"userCharge\": {\r\n            \"id\": 1,\r\n            \"charge\": \"administrador\"\r\n        },\r\n        \"admissionDate\": \"2012-05-21\"\r\n    },\r\n    \"updateDate\": \"05-10-2022\",\r\n    \"userUpdate\":{\r\n        \"id\": 2,\r\n        \"name\": \"Nombre prueba 2\",\r\n        \"age\": 50,\r\n        \"userCharge\": {\r\n            \"id\": 1,\r\n            \"charge\": \"administrador\"\r\n        },\r\n        \"admissionDate\": \"1998-11-21\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/commodity/updateCommodity"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCommodity",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"idUser\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/commodity/deleteCommodity"
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCommodity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/commodity/getAllCommodity"
+			},
+			"response": []
+		}
+	]
+}
